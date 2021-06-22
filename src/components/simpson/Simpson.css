@@ -1,0 +1,8 @@
+.target{
+    width: 400px;
+    background-color: cornflowerblue;
+}
+
+.wrap{
+    display: flex;
+}
