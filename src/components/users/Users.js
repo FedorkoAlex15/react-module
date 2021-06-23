@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import User from "../user/User";
+import '../user/User.css'
 
 export  default function Users(){
 
@@ -23,7 +24,7 @@ export  default function Users(){
 
 
     return (
-        <div>
+        <div className={'flex'}>
             {
                 posts.map(post => {
                     return <User item={post} />

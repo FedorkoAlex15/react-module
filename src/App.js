@@ -3,29 +3,18 @@ import './App.css';
 import {useEffect, useState} from "react";
 import User from "./components/user/User";
 import Users from "./components/users/Users";
-
+import './components/user/User.css'
+import Title from "./components/title/Title";
 
 
 
 function App() {
 
-    // let [posts, setPosts] = useState([]);
-    //
-    // useEffect(() => {
-    // fetch('https://jsonplaceholder.typicode.com/posts')
-    //     .then(value => value.json())
-    //     .then(value => {
-    //        setPosts(value)
-    //     })
-    //
-    // }, [])
-
 
   return (
-    <div>
-
+    <div className={'wrapper'}>
+      <Title/>
       <Users/>
-
     </div>
   );
 }

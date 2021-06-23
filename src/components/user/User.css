@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    background-color: lightblue;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+
+.title{
+    height: 60px;
+    background-color: darkseagreen;
+    margin-bottom: 30px;
+}
+
+
+
+
+.block{
+    width: 500px;
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    margin-bottom: 30px;
+}
+
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p{
+    padding: 10px;
+}
+
+
+
