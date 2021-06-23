@@ -1,18 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import Simpson from "./components/simpson/Simpson";
-import Menu from "./components/menu/Menu";
-import Simpsons from "./components/Simpsons/Simpsons";
-
-
+import Comments from "./comments/Comments";
+import './comments/Comments.css'
+import Title from "./title/Title";
 
 function App() {
   return (
-      <div>
-
+      <div className={'wrapper'}>
+          <Title/>
+        <Comments/>
       </div>
 
   );
 }
 
 export default App;
+
+
