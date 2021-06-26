@@ -1,15 +1,20 @@
 import {useEffect, useState} from 'react';
-import {getUsers} from "./services/API";
+import {getUser, getUsers} from "./services/API";
 import Users from "./components/users/Users";
 export default function App(){
 
+    let [user, setUser] = useState(null )
+
+    let appFn = (id) => {
+      getUser(id).then(value => setUser(value.data))
+    }
 
 
     let [users, setUsers] = useState([]);
 
     useEffect(() => {
         getUsers().then(value => {
-            setUsers(value);
+            setUsers(value.data);
 
 
         })
@@ -20,7 +25,13 @@ export default function App(){
 
   return (
       <div>
-        <Users items={users}/>
+        <Users items={users} appFn={appFn}/>
+          <hr/>
+
+
+            {
+                user && <div>{user.name}</div>
+            }
 
 
       </div>

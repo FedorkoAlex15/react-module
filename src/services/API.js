@@ -9,7 +9,10 @@ let axiosInstance = axios.create(options) ;
 
 const getUsers = () => {
     return axiosInstance('/users');
-
 }
 
-export {getUsers}
+const getUser = (id) => {
+    return axiosInstance('/users/' + id);
+}
+
+export {getUsers, getUser}
