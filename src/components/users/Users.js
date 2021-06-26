@@ -10,6 +10,7 @@ console.log(items)
                 items.map((value) => {
                     return <User item={value}/>
                 })
+
             }
 
 
