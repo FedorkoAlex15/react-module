@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 let options = {
-    baseUrl: 'https://jsonplaceholder.typicode.com/users',
+    baseURL: 'https://jsonplaceholder.typicode.com',
 }
 
 
@@ -12,4 +12,4 @@ const getUsers = () => {
 
 }
 
-export{getUsers}
+export {getUsers}
