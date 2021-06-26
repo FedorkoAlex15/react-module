@@ -1,29 +1,39 @@
-import {useEffect, useState} from 'react';
-
+import {useEffect, useState} from "react";
+import  axios from 'axios';
+import User from "../user/User";
 export default function Users() {
 
 
-    let [usersList, setUsersList] = useState([]); // [.....user]
+    let options = {
+        baseURL: 'https://jsonplaceholder.typicode.com'
+    }
 
+
+    let axiosData = axios.create(options);
+
+    const getUsers = () => {
+        return axiosData('/users')
+    }
+
+
+
+    let [user, setUser] = useState([])
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(value => value.json())
-            .then(response => {
-                console.log(response);
-                setUsersList(response);
-            });
-    }, []);
+        getUsers().then(value => {
+            setUser(value.data)
+        })
+    },[] )
 
-    return (
+    console.log(user)
+
+    return(
         <div>
             {
-                usersList
-                    .map(value => <div>{value.name}</div>)
-
-
+                user.map((value) => {
+                    return  <User items={value}/> ;
+                })
 
             }
-
         </div>
-    );
+    )
 }
