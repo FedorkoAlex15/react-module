@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 let options = {
-    baseURL: 'https://jsonplaceholder.typicode.com',
+    baseURL: 'https://jsonplaceholder.typicode.com'
 }
 
 

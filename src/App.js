@@ -5,11 +5,13 @@ export default function App(){
 
 
 
-    let [users, setUsers] = useState();
+    let [users, setUsers] = useState([]);
 
     useEffect(() => {
         getUsers().then(value => {
             setUsers(value);
+
+
         })
     }, [])
 
