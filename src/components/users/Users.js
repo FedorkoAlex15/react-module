@@ -1,19 +1,15 @@
 import {useEffect, useState} from "react";
 import  axios from 'axios';
 import User from "../user/User";
+import {getUsers} from "../API/API";
+import Post from "../post/Post";
+import Posts from "../posts/Posts";
+
+
+
+
 export default function Users() {
 
-
-    let options = {
-        baseURL: 'https://jsonplaceholder.typicode.com'
-    }
-
-
-    let axiosData = axios.create(options);
-
-    const getUsers = () => {
-        return axiosData('/users')
-    }
 
 
 
@@ -22,18 +18,22 @@ export default function Users() {
         getUsers().then(value => {
             setUser(value.data)
         })
-    },[] )
+    },[] );
 
-    console.log(user)
+
+
+
+
 
     return(
         <div>
             {
                 user.map((value) => {
-                    return  <User items={value}/> ;
+                    return  <User items={value}/>  ;
                 })
-
             }
+
+
         </div>
     )
 }
