@@ -21,7 +21,7 @@ export default function User({items}){
 
             {
                 post.map((value) => {
-                   return  value.title
+                   return  <div>{value.title}</div>
                 })
             }
         </div>
