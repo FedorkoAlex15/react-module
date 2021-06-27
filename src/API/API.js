@@ -7,8 +7,12 @@ let options = {
 let  getData = axios.create(options)
 
 
-let  createPosts =() =>{
+let  createPosts = () =>{
     return getData('/posts');
 }
 
-export {createPosts}
+let  getPost = (id) => {
+    return getData('/posts/' +  id)
+}
+
+export {createPosts, getPost }

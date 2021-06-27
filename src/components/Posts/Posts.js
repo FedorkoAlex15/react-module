@@ -1,9 +1,9 @@
 import Post from "../Post/Post";
 
-export default function Posts({items}){
+export default function Posts({items, appFn}){
 
 
-console.log({items})
+
 
 
 
@@ -11,7 +11,7 @@ console.log({items})
         <div>
             {
              items.map(value => {
-                return <Post item={value} fnFaher={} />
+                return <Post item={value}  appFn={appFn}/>
              })
             }
         </div>

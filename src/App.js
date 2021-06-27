@@ -1,11 +1,19 @@
-import {createPosts} from "./API/API";
+import {createPosts, getPost} from "./API/API";
 import {useEffect, useState} from "react";
-import {findAllByDisplayValue} from "@testing-library/react";
 import Posts from "./components/Posts/Posts";
 
 function App() {
 
-    console.log(createPosts())
+    let [post, setPost] = useState(null);
+
+    let  appFn = (id) => {
+        getPost(id).then(value => {
+           setPost(value.data);
+        })
+    }
+
+
+
 
     let [posts, setPosts] = useState([])
 
@@ -23,9 +31,17 @@ function App() {
 
   return (
       <div>
-          <Posts items={posts} />
+          <Posts items={posts}  appFn={appFn} />
+
+        <hr/>
+          {
+             post && <div>{post.body}</div>
+          }
+
 
       </div>
+
+
 
   );
 }
