@@ -1,4 +1,4 @@
-export default function Post({item}){
+export default function Post({item, fnFaher}){
 
 
 
@@ -6,7 +6,9 @@ export default function Post({item}){
 
         <div>
 
-            {item.id} -{item.title}  <button onClick={}></button>
+            {item.id} -{item.title}  <button onClick={
+                fn()
+        }>Show a post</button>
         </div>
     )
 }
