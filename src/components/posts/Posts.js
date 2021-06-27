@@ -4,16 +4,6 @@ import Post from "../post/Post";
 
 export default function Posts(){
 
-//     let [post, setpost] = useState([]);
-//
-//     useEffect(() => {
-//         getPosts().then(value => {
-//             setpost(value.data)
-//         })
-//     }, [])
-//
-//
-// console.log(post)
 
     return (
         <div>
