@@ -11,7 +11,7 @@ console.log({items})
         <div>
             {
              items.map(value => {
-                return <Post />
+                return <Post item={value} />
              })
             }
         </div>

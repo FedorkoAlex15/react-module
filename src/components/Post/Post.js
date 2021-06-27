@@ -1,4 +1,4 @@
-export default function Post(){
+export default function Post({item}){
 
 
 
@@ -6,6 +6,7 @@ export default function Post(){
 
         <div>
 
+            {item.id} -{item.title}  <button onClick={}></button>
         </div>
     )
 }
