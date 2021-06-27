@@ -12,7 +12,7 @@ const getUsers = () => {
 }
 
 const getPosts = (id) => {
-    return axiosData('/posts/' + id)
+    return axiosData('/users/' + id  + '/posts/')
 }
 
 

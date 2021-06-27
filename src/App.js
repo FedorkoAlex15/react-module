@@ -14,4 +14,3 @@ export default  function App(){
 
 
 
-export {getUsers, getPosts}
