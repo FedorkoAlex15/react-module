@@ -1,11 +1,20 @@
 import User from "../User/User";
 
-export default function Users({item, showPosts, posts}) {
-    return (
+
+export default function Users({items}){
+
+
+
+
+    return(
         <div>
-            {item.map(value => <User key={value.id} item={value}/>)}
+
+            {items.map((value) => {
+              return  <User key={value} items={value} />
+             })}
+
         </div>
-    );
+    )
 }
 
 
@@ -16,39 +25,27 @@ export default function Users({item, showPosts, posts}) {
 
 
 
+
+
+
+
+
+
+// From Git Hub
 // import User from "../User/User";
-// import {useEffect, useState} from "react";
-// import {getPosts} from "../../services/API";
 //
-// export default function Users({items}){
-//
-//     let  [posts, setPosts] = useState([]);
-//     useEffect(() => {
-//         getPosts(items.id).then(value => {
-//             setPosts(value.data)
-//         })
-//     }, [])
-//
-//
-//
-//
-//     return(
+// export default function Users({item, showPosts, posts}) {
+//     return (
 //         <div>
-//
-//             <div> <User res={items}/> </div>
-//
-//             {
-//                 posts.map((result) => {
-//                     return <User res={result}/>
-//                 })
-//             }
-//
-//             {/*{*/}
-//             {/*    items.map((result) => {*/}
-//             {/*        return <User key={result.id} items={result} />*/}
-//             {/*    })*/}
-//             {/*}*/}
-//
+//             {item.map(value => <User key={value.id} item={value}/>)}
 //         </div>
-//     )
+//     );
 // }
+//
+
+
+
+
+
+
+
