@@ -3,7 +3,10 @@ import {getUsersPosts} from "../../services/API";
 import './User.css'
 import Post from "../post/Post";
 
-export default function User({items:{id, name}}){
+
+export default function User({items:{id, name}, switcherFn}){
+
+
 
    let [usersPosts, setUsersPosts] = useState([]);
    let [switcher, setSwitcher] = useState('hide');
@@ -22,11 +25,7 @@ export default function User({items:{id, name}}){
 
 
             <button onClick={()=> {
-                    if (switcher === 'hide'){
-                        setSwitcher('show')
-                    } else if (switcher === 'show'){
-                        setSwitcher('hide')
-                    }
+                switcherFn(switcher, setSwitcher)
             }
         }>Show posts</button>
 
@@ -36,9 +35,10 @@ export default function User({items:{id, name}}){
 
                    usersPosts.map(value => {
                        return <div className={switcher}>
-                           {/*<h3> {value.title}</h3>*/}
-                           {/*<p>{value.body}</p>*/}
-                           <Post items={value}/>
+                           {/*<Post items={value} switcherFn={switcherFn} />*/}
+                           <h2>Post of User {value.userId}</h2>
+                           <p>{value.title}</p>
+                           <p>{value.body}</p>
                        </div>
 
                    })

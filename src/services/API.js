@@ -23,6 +23,11 @@ const getUsersPosts = (id) => {
 const getCommentsFromPosts = (id) =>{
     return getData('/posts/' + id + '/comments')
 }
-export {getUsers, getPosts, getUsersPosts, getCommentsFromPosts}
 
 
+
+const getComments = () => {
+    return getData('/comments')
+};
+
+export {getUsers, getPosts, getUsersPosts, getComments, getCommentsFromPosts}
