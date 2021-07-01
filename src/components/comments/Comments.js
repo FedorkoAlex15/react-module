@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {getComments} from "../../services/API";
 import Post from "../post/Post";
+import Comment from "../comment/Comment";
 
 export default function Comments(){
 
@@ -19,7 +20,7 @@ export default function Comments(){
 
             {
                 comments.map(value => {
-                    return <Comments items={value}/>
+                    return <Comment items={value}/>
                 })
             }
 

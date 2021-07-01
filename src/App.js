@@ -2,6 +2,8 @@ import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import Users from "./components/users/Users";
 import Posts from "./components/posts/Posts";
 import Comments from "./components/comments/Comments";
+import './App.css'
+import {findAllByDisplayValue} from "@testing-library/react";
 
 function App() {
 
@@ -22,13 +24,20 @@ function App() {
       <div>
 
 
-
+          <div className={'flex'}>
+              <div><Link to={'/'}>Homepage</Link></div>
               <div><Link to={"/users"}>Users</Link></div>
               <div><Link to={'/posts'}>Posts</Link></div>
               <div><Link to={'/comments'}>Comments</Link></div>
+          </div>
+
 
                 <Switch>
 
+
+                    <Route exact path={'/'} render={() => {
+                        return <h1>Homepage</h1>
+                    }}/>
 
                     <Route path={'/users'}>
                         <h1>Users</h1>

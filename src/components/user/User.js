@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {getUsersPosts} from "../../services/API";
 import './User.css'
-import Post from "../post/Post";
+
 
 
 export default function User({items:{id, name}, switcherFn}){
@@ -39,6 +39,7 @@ export default function User({items:{id, name}, switcherFn}){
                            <h2>Post of User {value.userId}</h2>
                            <p>{value.title}</p>
                            <p>{value.body}</p>
+                           <hr/>
                        </div>
 
                    })

@@ -24,12 +24,16 @@ console.log(commentsOfPosts)
                 switcherFn(switcher, setSwitcher)
             }
             }>Show comments</button>
-
+            <hr/>
 
             {
                 commentsOfPosts.map(value => {
                     return <div className={switcher} >
-                        {value.name} - {value.email}
+                            <h2>Comments</h2>
+                        <p>name: {value.name}</p>
+                        <p>email: {value.email}</p>
+                        <p>comment: {value.body}</p>
+                        <hr/>
                     </div>
 
                 })
