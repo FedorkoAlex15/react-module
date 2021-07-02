@@ -4,32 +4,27 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import Users from "./component/Users/Users";
 
 
 function App() {
   return (
-      <div>
-    <Router>
-        <Link to={'/users'}>
+
+
+       <div>
+     <Router>
+         <Link to={'/users'}>
             Users page
-        </Link>
+         </Link>
 
 
+         <Switch>
+             <Route path={'/users'} component={Users}/>
 
-        <Switch>
-            <Route path={'/users'} component={Users}/>
+         </Switch>
+     </Router>
 
-        </Switch>
-
-
-
-
-    </Router>
-
-
-
-
-      </div>
+       </div>
 
   );
 }
