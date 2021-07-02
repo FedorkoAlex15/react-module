@@ -28,7 +28,7 @@ export default function Users(){
                 })
             }
 
-            <Route path={'/users/:id'} component={UserDetails}/>
+            <Route path={'/users/:id'} component={UserDetails }/>
 
         </div>
     )

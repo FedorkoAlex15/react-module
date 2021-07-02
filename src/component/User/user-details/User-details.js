@@ -1,9 +1,22 @@
-export default function UserDetails(props){
+import {useParams} from 'react-router-dom'
+import {useEffect, useState} from "react";
+import {getUser} from "../../../services/App";
 
 
-    return(
+export default function UserDetails(props) {
+    // let {match: {params: {id}}} = props;
+
+    let [user, setUser] = useState({});
+    let {id} = useParams();
+    useEffect(() => {
+        getUser(id).then(value => setUser({...value.data}));
+    }, [id]);
+
+
+    return (
         <div>
-            UserDetails
+            {user.id} - {user.username}
+
         </div>
-    )
+    );
 }
