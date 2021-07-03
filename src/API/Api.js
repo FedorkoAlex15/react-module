@@ -1,2 +1,24 @@
 import axios from 'axios'
-const getData = axios.create('https://jsonplaceholder.typicode.com/')
+
+let options = {
+    baseURL: 'https://jsonplaceholder.typicode.com'
+}
+
+
+const getData = axios.create(options)
+
+let getUsers = () => {
+    return getData('/users');
+}
+
+
+let  getPosts = () => {
+    return getData('/posts');
+}
+
+let getComments = () => {
+    return getComments('/comments');
+}
+
+export {getUsers, getPosts,  getComments}
+
