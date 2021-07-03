@@ -17,7 +17,7 @@ let  getPosts = () => {
 }
 
 let getComments = () => {
-    return getComments('/comments');
+    return getData('/comments');
 }
 
 export {getUsers, getPosts,  getComments}
